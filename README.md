@@ -1,0 +1,2 @@
+# -1-EndSwitch
+$iEditMode = Number(GUICtrlRead($cCombo_Row) &amp; GUICtrlRead($cCombo_Col)) Case $cCombo_Col Switch GUICtrlRead($cCombo_Col) Case 0 GUICtrlSetData($cCombo_Row, 0) Case Else If GUICtrlRead($cCombo_Row) = 0 Then GUICtrlSetData($cCombo_Row, GUICtrlRead($cCombo_Col)) EndIf EndSwitch $iEditMode = Number(GUICtrlRead($cCombo_Row) &amp; GUICtrlRead($cCombo_Col)) Case $cCombo_Reset ; Toggle edit mode value to switch ESC modes $iEditMode *= -1 EndSwitch $vRet = _GUIListViewEx_EventMonitor($iEditMode) ; Use combos to change EditMode
